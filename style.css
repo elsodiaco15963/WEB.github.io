@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+}
+/*PARTE 1 DE HEADER*/
+.header_superior {
+    width: 100%;
+    display: flex;
+    background: linear-gradient(to right, #00a8e8, #ffffff);
+    align-items: center;
+    height: 100px;
+}
+
+.logo{
+    display: flex;
+    height: 80px;
+    margin-right: 25px;
+    margin-left: 10%;
+}
+
+.informacion{
+    display: flex;
+    font-size: 12px;
+    margin-left: 5%;
+}
+
+.informacion img{
+    height: 40px;
+    margin-right: 10px;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.ubicacion {
+    display: flex;
+    align-items: center;
+}
+
+/*PARTE2 DEL HEADER MENU*/
+
+.menu {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    position: relative;
+    padding: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+/* Estilos del submenú */
+.menu .submenu ul {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    top: 100%;
+    left: 0;
+}
+
+.menu .submenu:hover ul {
+    display: block;
+}
+
+.menu .submenu ul li {
+    border-bottom: 1px solid #666;
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .header_superior{
+        height: 80px;
+    }
+    .logo {
+        height: 60px;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+    .informacion {
+        flex-direction: column;
+        font-size: 8px;
+    }
+    .informacion img {
+        height: 20px;
+        margin-right: 5px;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+
+    .menu .submenu ul {
+        position: static;
+        background-color: transparent;
+        display: none;
+    }
+
+    .menu .submenu:hover ul {
+        display: block;
+    }
+
+}
