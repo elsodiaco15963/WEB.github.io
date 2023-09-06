@@ -7,7 +7,7 @@
 header{
     width: 100%;
 }
-/*PARTE 1 DE HEADER*/
+/*Estilo de la cabecera*/
 .header_superior {
     width: 100%;
     display: flex;
@@ -44,7 +44,7 @@ header{
     align-items: center;
 }
 
-/*PARTE2 DEL HEADER MENU*/
+/*Estilos del menu*/
 
 .menu {
     background-color: #333;
@@ -86,6 +86,59 @@ header{
 
 .menu .submenu ul li {
     border-bottom: 1px solid #666;
+}
+
+/*Slider de 4 imagenes*/
+
+.container-slider {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+    margin-left: -100%;
+}
+
+.slider__section {
+    width: 100%;
+}   
+
+.slider__img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+.slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.slider__btn:hover {
+    background: #fff;
+}
+
+.slider__btn--left {
+    left: 10px;
+}
+
+.slider__btn--right {
+    right: 10px;
 }
 
 @media (max-width: 768px) {
