@@ -1,42 +1,32 @@
-const slider = document.querySelector("#slider");
-let sliderSection = document.querySelectorAll(".slider__section");
-let sliderSectionLast = sliderSection[sliderSection.length -1];
-const btnLeft = document.querySelector("#btn--left");
-const btnRight = document.querySelector("#btn--right");
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
 
-slider.insertAdjacentElement('afterbegin', sliderSectionLast);
+function showSlide(slideIndex) {
+    if (slideIndex >= slides.length) {
+        currentSlide = 0;
+    } else if (slideIndex < 0) {
+        currentSlide = slides.length - 1;
+    }
 
-function next() {
-    let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
-    slider.style.marginLeft = "-200%";
-    slider.style.transition = "all 0.5s";
-    setTimeout(function(){
-        slider.style.transition = "none";
-        slider.insertAdjacentElement('beforeend', sliderSectionFirst);
-        slider.style.marginLeft = "-100%";
-    }, 500);
+    slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+            slide.classList.add("active");
+        } else {
+            slide.classList.remove("active");
+        }
+    });
 }
 
-function prev() {
-    let sliderSection = document.querySelectorAll(".slider__section");
-    let sliderSectionLast = sliderSection[sliderSection.length -1];
-    slider.style.marginLeft = "0%";
-    slider.style.transition = "all 0.5s";
-    setTimeout(function(){
-        slider.style.transition = "none";
-        slider.insertAdjacentElement('afterbegin', sliderSectionLast);
-        slider.style.marginLeft = "-100%";
-    }, 500);
+function nextSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
 }
 
-btnRight.addEventListener('click', function(){
-    next();
-});
+function prevSlide() {
+    currentSlide--;
+    showSlide(currentSlide);
+}
 
-btnLeft.addEventListener('click', function(){
-    prev();
-});
+showSlide(currentSlide);
 
-setInterval(function(){
-    next();
-}, 5000);
+setInterval(nextSlide, 5000);
