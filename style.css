@@ -119,6 +119,422 @@ header{
     opacity: 1;
 }
 
+/* Tarjeta de Nuestras Caracteristicas */
+
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye las tarjetas uniformemente en el espacio horizontal */
+    margin: -10px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    margin: 70px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #e8e8e8;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content .heading {
+    font-weight: 700;
+    font-size: 28px;
+    color: #000;
+}
+
+.content .para {
+    line-height: 1.5;
+    color: #000;
+}
+
+.content .btn {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    z-index: -1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover::before {
+    height: 100%;
+}
+
+.card:hover {
+    box-shadow: none;
+}
+
+.card:hover .btn {
+    color: #212121;
+    background: #e8e8e8;
+}
+
+.content .btn:hover {
+    outline: 2px solid #e8e8e8;
+    background: transparent;
+    color: #e8e8e8;
+}
+
+.content .btn:active {
+    box-shadow: none;
+}
+
+/* Titulos de cada pagina */
+
+/* Titulo de Nuestros Servicios*/
+.hero {
+    position: relative;
+    width: 100%; /* Ancho al 100% del contenedor padre */
+    height: 400px; /* Altura ajustable según tus necesidades */
+    background: url('image/reparacion-trabajador-mantenimiento-servicio.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+/* Titulo de Servicio Tecnico de lavadoras*/ 
+
+.hero1 {
+    position: relative;
+    width: 100%; /* Ancho al 100% del contenedor padre */
+    height: 400px; /* Altura ajustable según tus necesidades */
+    background: url('image/tec_lavadora.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* Por que Elegirnos */
+
+/* Estilos para la lista de bloques con imagen */
+.lista-bloques-con-imagen {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    padding: 20px;
+}
+
+.imagen {
+    text-align: center;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenido {
+    padding-left: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+/* Estilos para el contenedor de bloques */
+.bloques {
+    display: flex;
+    flex-direction: column; /* Organiza los bloques en una columna vertical */
+    flex-grow: 1; /* Permite que los bloques ocupen todo el espacio restante */
+}
+
+/* Estilos para cada fila */
+.fila {
+    display: flex;
+    justify-content: center; /* Centra los bloques horizontalmente en la fila */
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+
+/* Estilos para cada bloque */
+.bloque {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd; 
+    padding: 20px;
+    margin-right: 20px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+/* Estilos para el título del bloque */
+.bloque h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilos para el contenido del bloque */
+.bloque p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Estilos para el título */
+.contenido h2 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 20px; /* Espacio entre el título y los bloques */
+}
+
+/* Proceso */
+/* Estilo para el contenedor principal */
+.proceso-flecha {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna vertical */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    border-radius: 20px; /* Bordes redondeados */
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); /* Fondo degradado */
+    padding: 20px; /* Espacio alrededor del contenido */
+}
+
+/* Estilo para el título */
+.titulo {
+    background-color: #f0f0f0; /* Color de fondo del título */
+    padding: 10px 20px; /* Espacio alrededor del título */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilo para los pasos */
+.pasos {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre los pasos */
+    width: 100%; /* Ancho completo */
+}
+
+/* Estilo para cada paso */
+.paso {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0; /* Color de fondo del paso */
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%); /* Forma de flecha */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0 10px; /* Espacio entre los pasos */
+}
+
+.paso1 {
+    background-color: #007acc; /* Azul */
+    color: #ffffff; /* Texto blanco */
+}
+
+.paso2 {
+    background-color: #00cc66; /* Verde */
+    color: #ffffff; /* Texto blanco */
+}
+
+.paso3 {
+    background-color: #ff6666; /* Rojo */
+    color: #ffffff; /* Texto blanco */
+}
+
+.paso img {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+/* Estilo de la flecha */
+.proceso-flecha::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #f0f0f0;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Footer */
+
+.pie-pagina {
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(image/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 50px;
+    height: 45px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+/* Boton pa Arriba */
+
+.go-top-container {
+    position: fixed;
+    bottom: -2rem;
+    right: -2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: -1;
+}
+
+.go-top-button {
+    width: 0rem;
+    height: 0rem;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button img {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show {
+    z-index: 10;
+}
+
+.show .go-top-button {
+    animation: popup .5s ease-in-out;
+    width: 3rem;
+    height: 3rem;
+    z-index: 11;
+}
+
+.show img {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.whatsapp {
+    position: fixed;
+    left: 5px;
+    bottom: 5px;
+    z-index: 1;
+    width: 80px;
+}
+
+@keyframes popup {
+    0% {
+        width: 0rem;
+        height: 0rem;
+    }
+
+    100% {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         width: 100%;
@@ -161,5 +577,58 @@ header{
     .menu .submenu:hover ul {
         display: block;
     }
+    .lista-bloques-con-imagen {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .imagen {
+        max-width: 40%;
+        margin: 0 auto;
+    }
+
+    .contenido {
+        padding-left: 0; 
+        text-align: center;
+    }
+
+    .bloques {
+        flex-direction: column; /* Cambia a un diseño de columna */
+    }
+
+    .bloque {
+        width: 100%; /* Asegura que los bloques ocupen todo el ancho disponible */
+        margin-right: 0; /* Elimina el margen derecho entre los bloques */
+    }
+
+    .fila {
+        margin-bottom: 10px; /* Espacio entre filas más pequeño */
+    }
+
+    .pasos {
+        flex-direction: column;
+    }
+
+    /* Ajusta el ancho máximo de los pasos para llenar la pantalla */
+    .paso {
+        flex-basis: calc(50% - 20px); /* Divide la pantalla en 2 columnas con espacio entre ellas */
+        margin: 0 0 20px; /* Agrega espacio inferior entre los bloques */
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Forma de cuadrado */
+    }
+
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
