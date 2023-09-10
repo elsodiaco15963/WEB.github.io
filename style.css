@@ -296,6 +296,39 @@ header{
     background-size: cover;
     background-position: center bottom;
 }
+/* Titulo Nosotros - La Empresa */
+
+.hero2 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('image/istockphoto.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-shadow: 2px 2px 5px #000;
+}
 
 /* Titulo de Servicio Tecnico de lavadoras*/ 
 
@@ -700,6 +733,90 @@ h1 {
     transform: translateX(0);
 }
 
+
+/* Nosotros - Contenido */
+.contenido-empresa {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para la imagen lateral */
+.image-empresa {
+    width: 40%; /* Aumenta el ancho de la imagen */
+    height: auto;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+/* Estilos para el contenido de texto */
+.content-empresa {
+    flex: 1;
+    width: 100%;
+    margin: 5%;
+}
+
+/* Estilos para el título */
+.titu {
+    font-size: 28px; /* Aumenta el tamaño de fuente del título */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el icono junto al título */
+.titu img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Estilos para el párrafo */
+.paragraph {
+    font-size: 20px; /* Aumenta el tamaño de fuente del párrafo */
+    line-height: 1.5;
+} 
+
+/* Boton Mision y Vision */
+
+.contenido-vision-mision {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center;
+}
+
+.mensaje {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 20px; /* Espacio entre el mensaje y los botones */
+    font-size: 16px;
+    max-width: 70%;
+}
+
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px; /* Espacio entre los botones y el mensaje */
+}
+
+.custom-button {
+    background: linear-gradient(-45deg, #00aae4 0%, #fff 100%);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
 @keyframes popup {
     0% {
         width: 0rem;
@@ -711,6 +828,11 @@ h1 {
         height: 3rem;
     }
 }
+@media (max-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
     header {
@@ -719,18 +841,22 @@ h1 {
         flex-direction: column;
     }
     .header_superior{
-        height: 80px;
+        height: auto;
+        flex-direction: column;
     }
     .logo {
         display: flex;
         align-items: center;
-        height: 60px;
+        width: 100%;
+        height: 100px;
         margin-left: 5px;
         margin-right: 10px;
     }
+    .logo img{
+        width: 200px;
+    }
     .informacion {
-        flex-direction: column;
-        font-size: 8px;
+        font-size: 10px;
         margin-left: 10%;
     }
     .informacion img {
@@ -802,5 +928,39 @@ h1 {
     
     .card-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contenido-vision-mision {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mensaje {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .custom-button{
+        margin: 10px;
+    }
+
+    .botones-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contenido-empresa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titu {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .paragraph {
+        margin: 10px;
+        font-size: 15px;
     }
 }
