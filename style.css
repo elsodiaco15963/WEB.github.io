@@ -733,6 +733,16 @@ h1 {
     transform: translateX(0);
 }
 
+/* Estilos para el icono o imagen en el botón */
+.boton img {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Estilos para centrar el texto en el botón */
+.boton span {
+    flex: 1; /* Hace que el texto ocupe todo el espacio restante horizontalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+}
 
 /* Nosotros - Contenido */
 .contenido-empresa {
@@ -962,5 +972,28 @@ h1 {
     .paragraph {
         margin: 10px;
         font-size: 15px;
+    }
+    .titulo {
+        font-size: 20px; /* Reduce el tamaño del título */
+    }
+
+    p {
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    .contenido1 {
+        flex-direction: column;
+    }
+
+    .column-left, .column-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    ol{
+        text-align: left;
+        list-style-type: upper-roman;
+        list-style-position: inside;
+        list-style-image: url(image/correcto.png);
     }
 }
