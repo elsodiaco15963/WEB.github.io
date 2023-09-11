@@ -99,24 +99,37 @@ header{
 .slider {
     width: 100%;
     overflow: hidden;
+    text-align: center;
     position: relative;
+    background-color: #444;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .slide {
     width: 100%;
     display: none;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Agregamos una transición de 0.5 segundos */
+    transition: opacity 5s ease-in-out; /* Agregamos una transición de 0.5 segundos */
 }
 
 .slider img {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
 .slide.active {
     display: block;
-    opacity: 1;
+    animation: fade 5s ease-in-out; /* Agregamos una animación de desvanecimiento */
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Tarjeta de Nuestras Caracteristicas */
@@ -229,20 +242,39 @@ header{
     border-radius: 10px;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
     margin: 50px;
+    height: 300px;
 }
+
 .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-end;
     gap: 20px;
     color: #e8e8e8;
+    height: 100%;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.content .heading {
+.title-and-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading {
     font-weight: 700;
-    font-size: 28px;
-    color: #000;
+    font-size: 24px;
+    margin-left: 10px;
+    flex: 1;
+}
+
+.content .heading {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
 }
 
 .content .para {
@@ -539,7 +571,7 @@ h1 {
 
 .pie-pagina .grupo-1 .box h2 {
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-size: 20px;
 }
 
@@ -838,6 +870,55 @@ h1 {
         height: 3rem;
     }
 }
+
+/* Slider de Marcas */
+.slider_marcas { 
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    overflow: hidden;
+    background-color: #444;
+}
+
+.slider_marcas .slider-track {
+    display: flex;
+    animation: scroll 50s linear infinite;
+    -webkit-animation: scroll 50s linear infinite;
+    width: calc(200px * 22);
+    gap: 20px;
+    align-items: center; /* Alinea verticalmente las imágenes al centro */
+    justify-content: flex-start;
+}
+
+.slider_marcas .slide1 {
+    width: 150px;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.slider_marcas .slide1 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hover-f img{
+    border: none;
+    width: 20px;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-150px * 7));
+        transform: translateX(calc(-150px * 7));
+    }
+}
+
 @media (max-width: 1200px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
