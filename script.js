@@ -1,20 +1,23 @@
-let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
 
-    function showSlide(n) {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (n + slides.length) % slides.length;
-        slides[currentSlide].classList.add('active');
+    function showSlide(index) {
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        slides[index].classList.add("active");
     }
 
     function nextSlide() {
-        showSlide(currentSlide + 1);
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
     }
 
-    function prevSlide() {
-        showSlide(currentSlide - 1);
-    }
-    
-    setInterval(nextSlide, 4500);
+    // Mostrar la primera imagen al cargar la página
+    showSlide(currentIndex);
 
-    showSlide(currentSlide);
+    // Cambiar automáticamente de imagen cada 3 segundos
+    setInterval(nextSlide, 3000);
+});
