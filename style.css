@@ -110,15 +110,19 @@ header{
     height: 500px;
     width: 300%;
 }
-
+#maximo{
+    padding: 2% 7%;
+    background-color: #444;
+}
 #carrusel-contenido {
     margin: 0 auto;
     overflow: hidden;
     text-align: left;
+    background-color: #444;
 }
 
 .imagenes{
-    height: 500px;
+    height: 700px;
     width: 100%;
 }
 
@@ -428,7 +432,71 @@ header{
     position: relative;
     width: 100%;
     height: 400px;
-    background: url('image/istockphoto.jpg') center/cover no-repeat;
+    background: url('image/instatecservice.png') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #444;
+}
+
+.hero3 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('image/servicio_secadora.jpeg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero4 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('image/servicio_lavaseca.jpeg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero5 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('image/termotanque.jpeg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero6 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('image/servicio_jaccusi.jfif') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero7 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('image/servicio_estufa.jpeg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero8 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('image/servicio_refrigerado.jpeg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero9 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('image/termas.jpeg') center/cover no-repeat;
     background-size: cover;
     background-position: center center;
 }
@@ -757,6 +825,10 @@ h1 {
     bottom: 5px;
     z-index: 1;
     width: 80px;
+}
+
+.llamada-frio {
+    display: none;
 }
 
 /* Mejora el Contenido de los Servicios */
@@ -1131,6 +1203,9 @@ ul.lista-problemas li img, ul.lista-marcas li img {
 }
 
 @media (max-width: 1200px) {
+    .imagenes{
+        height: 500px;
+    }
     .card-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1305,5 +1380,28 @@ ul.lista-problemas li img, ul.lista-marcas li img {
         
     .imagenes{
         height: 250px;
+    }
+
+    .llamada-frio {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 10px;
+    }
+
+    #callnowbutton {
+        background-color: #3498db;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .llamada-icono {
+        width: 30px;
+        height: 30px;
     }
 }
