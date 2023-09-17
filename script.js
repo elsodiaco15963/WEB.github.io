@@ -3,11 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
 
     function showSlide(index) {
-        slides.forEach((slide) => {
-            slide.classList.remove("active");
-        });
-
-        slides[index].classList.add("active");
+        if (index >= 0 && index < slides.length) {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+    
+            slides[index].classList.add("active");
+        }
     }
 
     function nextSlide() {
